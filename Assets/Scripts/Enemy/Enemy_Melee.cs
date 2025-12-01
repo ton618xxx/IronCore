@@ -15,6 +15,15 @@ public struct AttackData
     public AttackType_Melee attackType; 
 }
 
+public enum AttackType_Melee {Close, Charge}
+
+public class Enemy_Melee : Enemy
+{
+    public IdleState_Melee idleState { get; private set; }
+    public MoveState_Melee moveState { get; private set; }
+
+    public RecoveryState_Melee recoveryState { get; private set; }  
+
     public ChaseState_Melee chaseState { get; private set; }
 
     public AttackState_Melee attackState { get; private set; }
